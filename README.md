@@ -30,7 +30,7 @@ To install the libraries required to run each project, navigate to the directory
 
 [2. Hazard Pictogram Identification with AI](#project-2-hazard-pictogram-identification-with-ai)
 
-[3. Dataset Processing Toolbox for AI Training](#project-5-dataset-processing-toolbox-for-ai-training)
+[3. Dataset Processing Toolbox for AI Training](#project-3-dataset-processing-toolbox-for-ai-training)
 
 [Putting it all together: Ways to use what I've made](#putting-it-all-together-ways-to-use-what-ive-made)
 
