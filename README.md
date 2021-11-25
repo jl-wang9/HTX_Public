@@ -42,7 +42,7 @@ To install the libraries required to run each project, navigate to the directory
 # Project 1: General Object Detector (Deep Learning)
 
 Jump to:
-[Introduction](#introduction)  |  [Features and Technical Information](#features-and-technical-information)  |  [Limitations](#limitations)  |  [Installation and Use](#installation-and-use)  |  [Folder Structure](#folder-structure-after-executing-the-code)
+[Introduction](#introduction)  |  [Features and Technical Information](#features-and-technical-information)  |  [Limitations](#limitations)  |  [Installation and Use](#installation-and-use)  |  [Folder Structure](#where-to-find-what)
 
 
 ## Introduction
