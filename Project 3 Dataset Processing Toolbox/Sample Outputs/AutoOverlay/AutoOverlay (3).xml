@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<annotation>
+	<folder>images</folder>
+	<filename>overlay_image_1000.jpg</filename>
+	<path>C:/Users/Airbusa388/Desktop/Jiale_Projects/Project5_Data_Processing_Toolbox/testing/auto_overlay\overlay_output\2021_08_16-23.47.41\annotations</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1275</width>
+		<height>817</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Sample</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>153</xmin>
+			<ymin>502</ymin>
+			<xmax>321</xmax>
+			<ymax>658</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Sample</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>839</xmin>
+			<ymin>618</ymin>
+			<xmax>993</xmax>
+			<ymax>767</ymax>
+		</bndbox>
+	</object>
+</annotation>
