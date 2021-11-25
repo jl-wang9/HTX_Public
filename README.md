@@ -92,7 +92,7 @@ This Object Detector **can be run offline**, allowing work with security sensiti
 
 
 ## Installation and Use
-1. Clone / Download the [Project 1 Folder](https://github.com/jl-wang9/HTX_Internship2021_Sharing/tree/main/Project%201%20General%20Object%20Detector).
+1. Clone / Download the Project 1 Folder.
     - Unzip the **Detectron_template_kit.zip** folder
     - Open the unzipped **Detectron_template_kit** folder. Rename it if needed to suit your project. This will be your "root" directory.
 
@@ -121,7 +121,7 @@ pip install -r requirements.txt
       - Repeat the process for images in the "test" folder (if required)
         - Label the test dataset if you want testing statistics.
         - Else, the test dataset can be completely unlabelled!
-    - Option B (Automatically) use my self-developed [Auto-Label programme](https://github.com/jl-wang9/HTX_Internship2021_Sharing/tree/main/Project%205%20Auto%20Labelling%20and%20Auto%20Cropping): 
+    - Option B (Automatically) use my self-developed Auto-Label programme - Project 3: 
       - Note: Works best for images / scans with plain backgrounds only
 
 7. Run the .ipynb (Jupyter Notebook) file in Jupyter Lab.
@@ -196,7 +196,7 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 
 ## Installation and Use
 
-- All files are found in the [Project 2 Folder](https://github.com/jl-wang9/HTX_Internship2021_Sharing/tree/main/Project%202%20Hazard%20Detector) in this repository. 
+- All files are found in the Project 2 Folder in this repository. 
 - Trained models are found on the HTX ROG, under my "Trained Models"
 - Installation process is the same as the [General Object Detector](#installation-and-use).
 
