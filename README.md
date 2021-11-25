@@ -30,11 +30,7 @@ To install the libraries required to run each project, navigate to the directory
 
 [2. Hazard Pictogram Identification with AI](#project-2-hazard-pictogram-identification-with-ai)
 
-[3. Video Analytics - Live Object Detection with AI](#project-3-video-analytics---live-object-detection-with-ai)
-
-[4. X-ray superposition application (with GUI)](#project-4-x-ray-superposition-application-with-gui)
-
-[5. Dataset Processing Toolbox for AI Training](#project-5-dataset-processing-toolbox-for-ai-training)
+[3. Dataset Processing Toolbox for AI Training](#project-5-dataset-processing-toolbox-for-ai-training)
 
 [Putting it all together: Ways to use what I've made](#putting-it-all-together-ways-to-use-what-ive-made)
 
@@ -218,126 +214,9 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 
 [Back to top](#htx-internship-2021-sharing-repository)
 
----
-
-
-# Project 3: Video Analytics - Live Object Detection with AI
-
-Jump to:
-[Introduction](#introduction-2)  |  [Features and Technical Information](#features-and-technical-information-2)  |  [Limitations](#limitations-1)  |  [Installation and Use](#installation-and-use-2)  
-
-## Introduction
-This project used the YOLOv5 architecture to perform live detection on videos. I ran out of time to tune the model for my own Custom Dataset so the inference in my code is done soley with the COCO dataset.
-
-Potential Applications:
-- Live Detection of Threats on live video feed from X-ray
-- Security Video Analytics
-
-Samples of videos I have analysed:
-
-![sample_cat](https://user-images.githubusercontent.com/88705695/129869858-0cee9dbb-1510-442d-ba8c-0aa7a6692b63.gif)
-![sample_rick](https://user-images.githubusercontent.com/88705695/129869958-4cc3a125-d0df-49d7-91f0-dbd32977597a.gif)
-
-
-## Features and Technical Information
-- Takes in video feed from a saved video or webcam
-- Recognises common everyday objects such as: humans, cats, dogs, cars, tie, etc..
-
-## Limitations
-- Have not figured out how to set up my own Custom Dataset.
-
-## Installation and Use
-
-
-
-[Back to top](#htx-internship-2021-sharing-repository)
-
 
 ---
-
-# Project 4: X-ray superposition application (with GUI)
-
-Jump to:
-[Introduction](#introduction-3)  |  [Features and Technical Information](#features-and-technical-information-3)  |  [Limitations](#limitations-2)  |  [Installation and Use](#installation-and-use-3)  
-
-## Introduction
-I designed an application to superimpose objects of interest onto X-ray scans automatically. The aim of this project is to speed up the training dataset collection & generation process for Machine Learning, allow us to easily produce thousands of staged scans without having to manually create them. This was done in a realistic manner that mimics real X-ray physics (Rogers et al., 2016). 
-
-## Features and Technical Information
-- Comes with a User Interface designed using PyQt
-- Automatically:
-  - generates thousands of different projected images
-  - generates groundtruth boxes to test AI against
-  - labels output images (in PascalVOC format) for training of Object Detection AI
- 
-- Projection features
-  - Visualy realistic images (mimics attenuation of X-ray through objects)
-  - Random placement of object within an area defined by the user (thru XML annotations)
-  - Random rotation of objects
-  - Random magnification of the object according to formula: ![magnification_formulae](https://user-images.githubusercontent.com/67915054/127338920-484ae17c-0fb9-42be-b427-7c1350252569.jpg) 
-
-- Superimposition makes use of the following algorithm
-  - Convert all values to single channel ('L')
-  - For each pixel in object, normalise it to a [0:1] mask
-  - Select area to superimpose object onto, slice that area out on the background
-  - Within the sliced area, perform an elementwise multiplication of the background value [0:255] with the normalised mask such that new pixel value <= old value.
-
-## Limitations
-- More work can be done to make the concealing of the objects spatially more realistic (fewer floating objects).
-
-## Installation and Use
-
-### Installation Instructions 
-
-#### Option A: Run with user interface - recommended method
-1. Clone project folder from github
-2. Create a new Conda environment `conda create --name myenv`
- - This is important so as to prevent interference with your existing environment!
-
-3. To install required libraries, navigate to the project directory then run:
-
-```
-pip install -r requirements.txt
-```
-
-4. Finally, run:
-
-```
-python TIP_Main.py
-```
-
-#### Option B: Run from Jupyter Notebook (with Inference)
-
-1. Clone project folder from github
-2. Create a new environment (if needed)
-3. To install required libraries, navigate to the project directory then run:
-
-```
-pip install -r requirements.txt
-```
-4. Make sure Jupyter Lab is installed. `pip install jupyterlab`
-5. Finally, open "05_TIP + Inference.ipynb" in JupyterLab and follow instructions on it
-
-
-### Usage Instructions 
-#### Datasets to prepare beforehand:
-- X-ray images to superimpose object onto
-  - Area to superimpose must be labelled in PascalVOC format in an XML file using [LabelImg](https://github.com/tzutalin/labelImg)
-- Cropped X-ray scan of objects to superimpose
-  - Either crop them manually or use my [Autocropping programme](https://github.com/jl-wang9/HTX_Internship2021_Public/blob/main/0.%20Useful%20Helper%20Scripts/autocropper.ipynb)
-
-#### About interface
-- Fill up all fields in Step 1-2, can tune Step 3 to suit current dataset but default settings are good enough.
-<div align="center">
-  <p>Click on image to view a higher resolution to read the text more easily</p>
-  <img src="https://user-images.githubusercontent.com/67915054/127335566-4b332f7d-8598-4192-a289-2d27c621db2b.jpg" width="1000px" />
-</div>
-
-
-[Back to top](#htx-internship-2021-sharing-repository)
-
----
-# Project 5: Dataset Processing Toolbox for AI Training
+# Project 3: Dataset Processing Toolbox for AI Training
 
 Jump to:
 [Introduction](#introduction-4)  |  [Features and Technical Information](#features-and-technical-information-4)  |  [Installation and Use](#installation-and-use-4)  |  [Sample Workflows](sample_workflows)
