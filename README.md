@@ -48,14 +48,15 @@ Jump to:
 ## Introduction
 A large part of my internship revolved around the building and use of a General Object Detector. This programme enables the training of Machine Learning models with PyTorch that can identify and locate **any** type of object! The training and inference process are both called by two lines of code each (very simple!)
 
-After training, a single image or a set of test images can be fed to the model, from which it will box up the location of the object, along with the Class Type and the associated confidence level. The inferred images are then saved to a pre-specified folder.
+After training, a single image or a set of test images can be fed to the model, from which it will box up the location of the object, along with the Class Type and the associated confidence level. The inferred images are then saved to a pre-specified folder. It also has a **hyperparameter tuning functionality** (more info below).
 
-This Object Detector **can be run offline**, allowing work with security sensitive datasets. Beyond GHS Hazard Symbols, the detector has been used to identify objects of interest in cargo X-ray scans and to identify animals (such as raccoons) and humans in photos. It also has a **hyperparameter tuning functionality** (more info below).
+This Object Detector **can be run offline**, allowing work with security sensitive datasets. The detector has been used to identify GHS Hazard Symbols on chemical bottles, threat objects of interest in cargo X-ray scans (e.g., firearms), as well as (just for fun) animals and humans. Full set of images inferred are not shown as it contains confidential information. Only non-confidential images are shown below.
+
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/67915054/126133269-cdccc437-8bfe-40b5-bfaf-b43796f5df0a.png" width="450px" />
-  <img src="https://user-images.githubusercontent.com/67915054/126479328-02c9dc2c-248a-4a99-9831-aa15e15be741.png" width="450px" />
-  <p>Example output of my AI model...</p>
+  <img src="https://user-images.githubusercontent.com/67915054/143582435-ecf794b8-85c8-47dc-a05e-56d5728feae0.jpg" width="450px" />
+  <img src="https://user-images.githubusercontent.com/67915054/143583211-7fcd2e13-42c0-4606-bc63-9d2c8093e853.jpg" width="450px" />
+  <p>Example outputs of my AI model...</p>
 </div>
 
 ## Features and Technical Information
@@ -204,7 +205,7 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 
 | Notebook Name                                       | Description                                                                                                                                                       | Run On           | Number of <br>Classes | Dataset Used                                                                                       |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|-----------------------|----------------------------------------------------------------------------------------------------|
-| 1 Raccoon Detector.ipynb                            | Trained to detect Raccoons (1 class only). <br><br>Model tested on pictures of other animals, objects, <br>and Gordon Ramsay.                                     | Google <br>Colab | 1                     | [raccoon_dataset](https://github.com/experiencor/raccoon_dataset.git)                      |
+| 1 Raccoon Detector.ipynb                            | Trained to detect Raccoons (1 class only). <br><br>Model tested on pictures of other animals, objects, <br>and Gordon Ramsay.                                     | Google <br>Colab | 1                     |                       |
 | 2 Oxidizer Detector.ipynb                           | Trained to detect Oxidizer Symbols (1 class only)<br><br>Model tested on other hazard symbols to flag<br>out False Negatives and False Positives                  | Google<br>Colab  | 1                     | Oxidizer Dataset <br>(On HTX ROG Datasets folder)                                                  |
 | 3 All Hazard Symbols <br>Detector.ipynb             | Trained to detect 5 classes of symbols (Corrosive,<br>Oxidizer, Explosive, Harmful, Flammable).                                                                   | Google <br>Colab | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
 | 4 Hazard Detector w <br>Hyperparameter Tuning.ipynb | Same as (3) but with hyperparameter <br>tuning functionality.                                                                                                     | Google<br>Colab  | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
