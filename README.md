@@ -50,7 +50,7 @@ A large part of my internship revolved around the building and use of a General 
 
 After training, a single image or a set of test images can be fed to the model, from which it will box up the location of the object, along with the Class Type and the associated confidence level. The inferred images are then saved to a pre-specified folder. It also has a **hyperparameter tuning functionality** (more info below).
 
-This Object Detector **can be run offline**, allowing work with security sensitive datasets. The detector has been used to identify GHS Hazard Symbols on chemical bottles, threat objects of interest in cargo X-ray scans (e.g., firearms), as well as (just for fun) animals and humans. Full set of images inferred are not shown as it contains confidential information. Only non-confidential images are shown below.
+This Object Detector **can be run offline**, allowing work with security sensitive datasets. The detector has been used to identify GHS Hazard Symbols on chemical bottles, threat objects of interest in cargo X-ray scans (e.g., firearms or Explosive Precursors), as well as (just for fun) animals and humans. Full set of images inferred are not shown as it contains confidential information. Only non-confidential images are shown below.
 
 
 <div align="center">
