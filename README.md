@@ -94,8 +94,8 @@ This Object Detector **can be run offline**, allowing work with security sensiti
 
 ## Installation and Use
 1. Clone / Download the Project 1 Folder.
-    - Unzip the **Detectron_template_kit.zip** folder
-    - Open the unzipped **Detectron_template_kit** folder. Rename it if needed to suit your project. This will be your "root" directory.
+    - Unzip the **A-Detectron_Kit.zip** folder
+    - Open the folder. Rename it if needed to suit your project. This will be your "root" directory.
 
 2. Create a new Conda environment `conda create --name myenv`
  - This is important so as to prevent interference with your existing environment!
