@@ -9,3 +9,4 @@
 - Remember to create a new conda environment and:
   - Install torch, torchvision for your computer: [Install PyTorch](https://pytorch.org/get-started/previous-versions/)
   - Run `pip install -r requirements.txt`
+- Read the main README.md file on the main directory for more details.
