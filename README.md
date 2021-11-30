@@ -4,24 +4,11 @@ by Wang Jiale (May-Aug 2021)
 
 ---
 
-This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Technology Deployment Department) from May to Aug 2021. For sharing and use by colleagues. The work allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
+This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Imaging Science Team) from May to Aug 2021. This internship allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
 
 **Note: Due to security restrictions, I am not allowed to upload most of the real datasets that I've used in my work. Instead, non-sensitive datasets are used for demonstration in this repo.** 
 
 The code however is shared in full. Contact CBRNE TD officers for more information.
-
-## General Installation Instructions
-**Important: Juptyer Lab is needed to view most of my projects. Install using**
-
-`conda install -c conda-forge jupyterlab `
-OR
-`pip install jupyterlab`
-
-To install the libraries required to run each project, navigate to the directory of the project on your computer (after cloning from this repo) and run:
-
-`pip install -r requirements.txt`
-
----
 
 ## List of Projects that I worked on. 
 #### Click on the relevant link for more info & installation
@@ -36,6 +23,17 @@ To install the libraries required to run each project, navigate to the directory
 
 [Key Takeaways from Internship](#key-takeaways-from-internship)
 
+
+## General Installation Instructions
+**Important: Juptyer Lab is needed to view most of my projects. Install using**
+
+`conda install -c conda-forge jupyterlab `
+OR
+`pip install jupyterlab`
+
+To install the libraries required to run each project, navigate to the directory of the project on your computer (after cloning from this repo) and run:
+
+`pip install -r requirements.txt`
 
 ---
 
