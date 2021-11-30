@@ -54,9 +54,9 @@ This Object Detector **can be run offline**, allowing work with security sensiti
 
 
 <div align="center">
+  <p>Example detections (red boxes) of my AI model...</p>	
   <img src="https://user-images.githubusercontent.com/67915054/143583396-f40f4642-9348-468d-b0a3-1b229161bdf5.jpg" width="600px" />
   <img src="https://user-images.githubusercontent.com/67915054/143583211-7fcd2e13-42c0-4606-bc63-9d2c8093e853.jpg" width="600px" />
-  <p>Example outputs of my AI model...</p>
 </div>
 
 ## Features and Technical Information
