@@ -28,9 +28,9 @@ To install the libraries required to run each project, navigate to the directory
 
 [1. General Object Detector for Images (Deep Learning)](#project-1-general-object-detector-deep-learning)
 
-[2. Dataset Processing Toolbox for AI Training](#project-2-dataset-processing-toolbox-for-ai-training)
+[2. Hazard Pictogram Identification with AI](#project-2-hazard-pictogram-identification-with-ai)
 
-[3. Hazard Pictogram Identification with AI](#project-3-hazard-pictogram-identification-with-ai)
+[3. Dataset Processing Toolbox for AI Training](#project-3-dataset-processing-toolbox-for-ai-training)
 
 [Putting it all together: Ways to use what I've made](#putting-it-all-together-ways-to-use-what-ive-made)
 
@@ -42,7 +42,7 @@ To install the libraries required to run each project, navigate to the directory
 # Project 1: General Object Detector (Deep Learning)
 
 Jump to:
-[Introduction](#introduction)  |  [Features and Technical Information](#features-and-technical-information)  |  [Limitations](#limitations)  |  [Installation and Use](#installation-and-use)  |  [Folder Structure](#folder-structure)
+[Introduction](#introduction)  |  [Features and Technical Information](#features-and-technical-information)  |  [Limitations](#limitations)  |  [Installation and Use](#installation-and-use)  |  [Folder Structure](#where-to-find-what)
 
 
 ## Introduction
@@ -93,9 +93,6 @@ This Object Detector **can be run offline**, allowing work with security sensiti
 
 
 ## Installation and Use
-<details>
-	<summary>Expand for installation instructions</summary>
-
 1. Clone / Download the Project 1 Folder.
     - Unzip the **A-Detectron_Kit.zip** folder
     - Open the folder. Rename it if needed to suit your project. This will be your "root" directory.
@@ -154,9 +151,7 @@ pip install -r requirements.txt
 
 13. Retrieve the test results and/or trained model in the directories shown below:
 
-</details>
-
-## Folder Structure
+## Where to find what
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/67915054/126140674-b12f4eb6-d82c-4a84-898b-4e3770dcb2f7.jpg" width="700px" />
@@ -168,7 +163,61 @@ pip install -r requirements.txt
 
 ---
 
-# Project 2: Dataset Processing Toolbox for AI Training
+# Project 2: Hazard Pictogram Identification with AI
+
+Jump to:
+[Introduction](#introduction-1)  |  [Features and Technical Information](#features-and-technical-information-1)  |  [Installation and Use](#installation-and-use-1)
+
+## Introduction
+For my first iteration of the abovementioned Object Detector, I trained a Machine Learning model using PyTorch to identify and locate standard hazard symbols ([GHS pictograms](https://en.wikipedia.org/wiki/GHS_hazard_pictograms) and ([9-class cargo labels](https://www.dgiglobal.com/classes/)). The goal is to assist border officers (even those without training in identifying hazards) to quickly identify any hazardous substances and file a report if needed. The model is able to detect the following hazard classes: 
+
+- Explosives (GHS01, Class 1)
+- Flammable (GHS02, Class 3/4)
+- Oxidizing Agent (GHS03, Class 5.1/5.2)
+- Corrosive (GHS05, Class 8)
+- Harmful (GHS07)
+
+**For an *all purpose* Object Detector, see [Project 1: General Object Detector](#project-1-general-object-detector-deep-learning)**
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/67915054/126132889-4c97cc81-08d0-4f28-ab63-040c19844bb0.png" width="450px" />
+  <img src="https://user-images.githubusercontent.com/67915054/126477681-4ff89a5c-e07c-46ad-8189-c933d85fef37.png" width="300px" />
+  <p>Samples of Hazard Labels identified by the AI model.</p>
+</div>
+
+## Features and Technical Information
+- Uses the PyTorch ML library.
+- Uses the Faster R-CNN architecture from [FAIR Detectron](https://github.com/facebookresearch/Detectron); pretrained on the COCO dataset.
+- Trained on ~700 images, containing ~820 hazard symbols.
+  - Images obtained from Google Images using [Simple Mass Downloader Chrome Extension](https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed)
+  - Labelled using [LabelImg](https://github.com/tzutalin/labelImg) in **Pascal VOC format**.
+- Best model yielded mAP(IOU50) = 0.9812 on Validation dataset, and mAP(IOU50) = 0.731 on the more challenging Test dataset.
+- Hyperparameters for best model: SGD Optimiser, lr=0.02, batch_size=2, num_epochs=8, optimizer_decay=0.0005, momentum=0.9, lr decreases 10x per 3 epochs.
+- Developed on Google Colab but later adapted for offline environments (also see [Project 1](#project-1-general-object-detector)).
+
+## Installation and Use
+
+- All files are found in the Project 2 Folder in this repository. 
+- Trained models are found on the HTX ROG, under my "Trained Models"
+- Installation process is the same as the [General Object Detector](#installation-and-use).
+
+### About the project folder
+
+| Notebook Name                                       | Description                                                                                                                                                       | Run On           | Number of <br>Classes | Dataset Used                                                                                       |
+|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|-----------------------|----------------------------------------------------------------------------------------------------|
+| 1 Raccoon Detector.ipynb                            | Trained to detect Raccoons (1 class only). <br><br>Model tested on pictures of other animals, objects, <br>and Gordon Ramsay.                                     | Google <br>Colab | 1                     |                       |
+| 2 Oxidizer Detector.ipynb                           | Trained to detect Oxidizer Symbols (1 class only)<br><br>Model tested on other hazard symbols to flag<br>out False Negatives and False Positives                  | Google<br>Colab  | 1                     | Oxidizer Dataset <br>(On HTX ROG Datasets folder)                                                  |
+| 3 All Hazard Symbols <br>Detector.ipynb             | Trained to detect 5 classes of symbols (Corrosive,<br>Oxidizer, Explosive, Harmful, Flammable).                                                                   | Google <br>Colab | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
+| 4 Hazard Detector w <br>Hyperparameter Tuning.ipynb | Same as (3) but with hyperparameter <br>tuning functionality.                                                                                                     | Google<br>Colab  | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
+| 5 Hyperparameter Tuning <br>Results.ipynb           | Visualisation of results generated by (4)                                                                                                                         | Jupyter          | -                     | -                                                                                                  |
+| 6 Hazard Detector FINAL.ipynb                       | **Recommended version** <br>FINAL Notebook to train, validate, and test Hazard<br>Pictograms. <br><br>Can also use this notebook to test on your own<br>datasets. | Jupyter          | Unlimited!            | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)<br><br>OR<br><br><br>Your own dataset! |
+
+
+[Back to top](#htx-internship-2021-sharing-repository)
+
+
+---
+# Project 3: Dataset Processing Toolbox for AI Training
 
 Jump to:
 [Introduction](#introduction-4)  |  [Features and Technical Information](#features-and-technical-information-4)  |  [Installation and Use](#installation-and-use-4)  |  [Sample Workflows](sample_workflows)
@@ -224,8 +273,6 @@ This toolbox contains useful programmes to process, label, and generate datasets
 
 
 ## Installation and Use
-<details>
-	<summary>Expand for installation instructions</summary>
 
 ### Main File
 
@@ -246,67 +293,6 @@ pip install -r requirements.txt
 	- OR Open `AutoOverlay.ipynb` in Jupyter Lab
 	- OR Open `Delete_Duplicates.ipynb` or `Image_Comparison.ipynb` in Jupyter Lab
   
-  </details>
-
-[Back to top](#htx-internship-2021-sharing-repository)
-
-
----
-
-# Project 3: Hazard Pictogram Identification with AI
-
-Jump to:
-[Introduction](#introduction-1)  |  [Features and Technical Information](#features-and-technical-information-1)  |  [Installation and Use](#installation-and-use-1)
-
-## Introduction
-For my first iteration of the abovementioned Object Detector, I trained a Machine Learning model using PyTorch to identify and locate standard hazard symbols ([GHS pictograms](https://en.wikipedia.org/wiki/GHS_hazard_pictograms) and ([9-class cargo labels](https://www.dgiglobal.com/classes/)). The goal is to assist border officers (even those without training in identifying hazards) to quickly identify any hazardous substances and file a report if needed. The model is able to detect the following hazard classes: 
-
-- Explosives (GHS01, Class 1)
-- Flammable (GHS02, Class 3/4)
-- Oxidizing Agent (GHS03, Class 5.1/5.2)
-- Corrosive (GHS05, Class 8)
-- Harmful (GHS07)
-
-**For an *all purpose* Object Detector, see [Project 1: General Object Detector](#project-1-general-object-detector-deep-learning)**
-
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/67915054/126132889-4c97cc81-08d0-4f28-ab63-040c19844bb0.png" width="450px" />
-  <img src="https://user-images.githubusercontent.com/67915054/126477681-4ff89a5c-e07c-46ad-8189-c933d85fef37.png" width="300px" />
-  <p>Samples of Hazard Labels identified by the AI model.</p>
-</div>
-
-## Features and Technical Information
-- Uses the PyTorch ML library.
-- Uses the Faster R-CNN architecture from [FAIR Detectron](https://github.com/facebookresearch/Detectron); pretrained on the COCO dataset.
-- Trained on ~700 images, containing ~820 hazard symbols.
-  - Images obtained from Google Images using [Simple Mass Downloader Chrome Extension](https://chrome.google.com/webstore/detail/simple-mass-downloader/abdkkegmcbiomijcbdaodaflgehfffed)
-  - Labelled using [LabelImg](https://github.com/tzutalin/labelImg) in **Pascal VOC format**.
-- Best model yielded mAP(IOU50) = 0.9812 on Validation dataset, and mAP(IOU50) = 0.731 on the more challenging Test dataset.
-- Hyperparameters for best model: SGD Optimiser, lr=0.02, batch_size=2, num_epochs=8, optimizer_decay=0.0005, momentum=0.9, lr decreases 10x per 3 epochs.
-- Developed on Google Colab but later adapted for offline environments (also see [Project 1](#project-1-general-object-detector)).
-
-## Installation and Use
-
-<details>
-	<summary>Expand for installation instructions</summary>
-	
-- All files are found in the Project 2 Folder in this repository. 
-- Trained models are found on the HTX ROG, under my "Trained Models"
-- Installation process is the same as the [General Object Detector](#installation-and-use).
-
-</details>
-
-### About the project folder
-
-| Notebook Name                                       | Description                                                                                                                                                       | Run On           | Number of <br>Classes | Dataset Used                                                                                       |
-|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|-----------------------|----------------------------------------------------------------------------------------------------|
-| 1 Raccoon Detector.ipynb                            | Trained to detect Raccoons (1 class only). <br><br>Model tested on pictures of other animals, objects, <br>and Gordon Ramsay.                                     | Google <br>Colab | 1                     |                       |
-| 2 Oxidizer Detector.ipynb                           | Trained to detect Oxidizer Symbols (1 class only)<br><br>Model tested on other hazard symbols to flag<br>out False Negatives and False Positives                  | Google<br>Colab  | 1                     | Oxidizer Dataset <br>(On HTX ROG Datasets folder)                                                  |
-| 3 All Hazard Symbols <br>Detector.ipynb             | Trained to detect 5 classes of symbols (Corrosive,<br>Oxidizer, Explosive, Harmful, Flammable).                                                                   | Google <br>Colab | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
-| 4 Hazard Detector w <br>Hyperparameter Tuning.ipynb | Same as (3) but with hyperparameter <br>tuning functionality.                                                                                                     | Google<br>Colab  | 5                     | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)                                        |
-| 5 Hyperparameter Tuning <br>Results.ipynb           | Visualisation of results generated by (4)                                                                                                                         | Jupyter          | -                     | -                                                                                                  |
-| 6 Hazard Detector FINAL.ipynb                       | **Recommended version** <br>FINAL Notebook to train, validate, and test Hazard<br>Pictograms. <br><br>Can also use this notebook to test on your own<br>datasets. | Jupyter          | Unlimited!            | All Hazard Symbols Dataset <br>(On HTX ROG Datasets folder)<br><br>OR<br><br><br>Your own dataset! |
-
 
 [Back to top](#htx-internship-2021-sharing-repository)
 
