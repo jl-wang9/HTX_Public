@@ -34,7 +34,7 @@ To install the libraries required to run each project, navigate to the directory
 
 [Putting it all together: Ways to use what I've made](#putting-it-all-together-ways-to-use-what-ive-made)
 
-**[Key Takeaways from Internship](#key-takeaways-from-internship)**
+[Key Takeaways from Internship](#key-takeaways-from-internship)
 
 
 ---
@@ -94,7 +94,7 @@ This Object Detector **can be run offline**, allowing work with security sensiti
 
 ## Installation and Use
 <details>
-	<summary>Expand for installation instructions</summary>
+	<summary>Click to expand installation instructions</summary>
 
 1. Clone / Download the Project 1 Folder.
     - Unzip the **A-Detectron_Kit.zip** folder
@@ -171,7 +171,7 @@ pip install -r requirements.txt
 # Project 2: Dataset Processing Toolbox for AI Training
 
 Jump to:
-[Introduction](#introduction-4)  |  [Features and Technical Information](#features-and-technical-information-4)  |  [Installation and Use](#installation-and-use-4)  |  [Sample Workflows](sample_workflows)
+[Introduction](#introduction-1)  |  [Features and Technical Information](#features-and-technical-information-1)  |  [Installation and Use](#installation-and-use-1)  |  [Sample Workflows](#putting-it-all-together-ways-to-use-what-ive-made)
 
 ## Introduction
 This toolbox contains useful programmes to process, label, and generate datasets for training Object Detection AI models.
@@ -189,7 +189,6 @@ This toolbox contains useful programmes to process, label, and generate datasets
 | Auto-Cropper<br><br>[(More Info)](#autocropper)                                                          | Given a labelled dataset (in PascalVOC format), automatically <br>crops out all labelled objects and save them <br>as separate images.                                                                                                                                   | **Toolbox.py**<br>(recommended)<br><br>OR<br><br>Autocropper.ipynb  | Extract objects for use in<br>Auto-Overlay or X-ray<br>Image Projection.                                   |
 | Video Extractor<br><br>                                                 | Given a video stream, automatically extracts static images at<br>set intervals.                                                                                                                                                                                          | Toolbox.py<br><br>OR<br><br>Video_Extractor.ipynb                   | Extract training images from<br>a video stream.                                                            |
 | Delete Duplicate Images                                                                                  | Finds and deletes duplicate images, even if they are of <br>different filenames.                                                                                                                                                                                         | Delete_Duplicates.ipynb                                             | Remove duplicate images in<br>a big training dataset.                                                      |
-| Image Comparison                                                                                         | Compares the difference between 2 images and highlights these<br>pixels in black (while similar pixels are in white).                                                                                                                                                    | Image_Comparison.ipynb                                              | Compare two projection<br>algorithms to determine the<br>better one.                                       |
 
 
 ## Features and Technical Information
@@ -225,7 +224,7 @@ This toolbox contains useful programmes to process, label, and generate datasets
 
 ## Installation and Use
 <details>
-	<summary>Expand for installation instructions</summary>
+	<summary>Click to expand installation instructions</summary>
 
 ### Main File
 
@@ -241,7 +240,7 @@ pip install -r requirements.txt
 
 4. Make sure Jupyter Lab is installed. `pip install jupyterlab`
 
-5. Do either of the following, depending on what you need. Refer to [table](#introduction-4) above.
+5. Do either of the following, depending on what you need. Refer to [table](#introduction-1) above.
 	- Run `python Toolbox.py` in command prompt
 	- OR Open `AutoOverlay.ipynb` in Jupyter Lab
 	- OR Open `Delete_Duplicates.ipynb` or `Image_Comparison.ipynb` in Jupyter Lab
@@ -256,7 +255,7 @@ pip install -r requirements.txt
 # Project 3: Hazard Pictogram Identification with AI
 
 Jump to:
-[Introduction](#introduction-1)  |  [Features and Technical Information](#features-and-technical-information-1)  |  [Installation and Use](#installation-and-use-1)
+[Introduction](#introduction-2)  |  [Features and Technical Information](#features-and-technical-information-2)  |  [Installation and Use](#installation-and-use-2)
 
 ## Introduction
 For my first iteration of the abovementioned Object Detector, I trained a Machine Learning model using PyTorch to identify and locate standard hazard symbols ([GHS pictograms](https://en.wikipedia.org/wiki/GHS_hazard_pictograms) and ([9-class cargo labels](https://www.dgiglobal.com/classes/)). The goal is to assist border officers (even those without training in identifying hazards) to quickly identify any hazardous substances and file a report if needed. The model is able to detect the following hazard classes: 
@@ -288,7 +287,7 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 ## Installation and Use
 
 <details>
-	<summary>Expand for installation instructions</summary>
+	<summary>Click to expand installation instructions</summary>
 	
 - All files are found in the Project 2 Folder in this repository. 
 - Trained models are found on the HTX ROG, under my "Trained Models"
@@ -296,7 +295,7 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 
 </details>
 
-### About the project folder
+## About the project folder
 
 | Notebook Name                                       | Description                                                                                                                                                       | Run On           | Number of <br>Classes | Dataset Used                                                                                       |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|-----------------------|----------------------------------------------------------------------------------------------------|
