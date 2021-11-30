@@ -4,7 +4,7 @@ by Wang Jiale (May-Aug 2021)
 
 ---
 
-This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Technology Deployment Department) from May to Aug 2021. For sharing with colleagues. The work allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
+This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Technology Deployment Department) from May to Aug 2021. For sharing and use by colleagues. The work allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
 
 **Note: Due to security restrictions, I am not allowed to upload most of the real datasets that I've used in my work. Instead, non-sensitive datasets are used for demonstration in this repo.** 
 
