@@ -46,7 +46,7 @@ Jump to:
 
 
 ## Introduction
-A large part of my internship revolved around the building and use of a General Object Detector. This programme enables the training of Machine Learning models with PyTorch that can identify and locate **any** type of object! The training and inference process are both called by two lines of code each (very simple!)
+A large part of my internship revolved around the building and use of a General Object Detector. This programme enables the training of Machine Learning models with PyTorch that can identify and locate **any** type of object! The training and inference process are both called by two lines of code each.
 
 After training, a single image or a set of test images can be fed to the model, from which it will box up the location of the object, along with the Class Type and the associated confidence level. The inferred images are then saved to a pre-specified folder. It also has a **hyperparameter tuning functionality** (more info below).
 
@@ -177,7 +177,7 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 - Corrosive (GHS05, Class 8)
 - Harmful (GHS07)
 
-**For an *all purpose* Object Detector, see [Project 1: General Object Detector](#project-1-general-object-detector)**
+**For an *all purpose* Object Detector, see [Project 1: General Object Detector](#project-1-general-object-detector-deep-learning)**
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/67915054/126132889-4c97cc81-08d0-4f28-ab63-040c19844bb0.png" width="450px" />
