@@ -4,11 +4,13 @@ by Wang Jiale (May-Aug 2021)
 
 ---
 
-This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Imaging Science Team) from May to Aug 2021. This internship allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
+This repository contains my work for my AI / Machine Learning internship with HTX CBRNE (Imaging Science Team) from May to Aug 2021. Code from this repo is currently used by engineers at HTX to rapidly prototype Machine Learning models.
+
+This internship allowed me to better appreciate [HTX's](https://www.htx.gov.sg/who-we-are) efforts to develop in-house Deep Learning, Computer Vision, and Imaging Science capbilities to safeguard Singapore's security.
 
 **Note: Due to security restrictions, I am not allowed to upload most of the real datasets that I've used in my work. Instead, non-sensitive datasets are used for demonstration in this repo.** 
 
-The code however is shared in full. Contact CBRNE TD officers for more information.
+The code however is shared in full. Contact HTX CBRNE TD officers for more information.
 
 ## List of Projects that I worked on. 
 #### Click on the relevant link for more info & installation
@@ -287,8 +289,8 @@ For my first iteration of the abovementioned Object Detector, I trained a Machin
 <details>
 	<summary>Click to expand installation instructions</summary>
 	
-- All files are found in the Project 2 Folder in this repository. 
-- Trained models are found on the HTX ROG, under my "Trained Models"
+- All files are found in the Project 3 Folder in this repository. 
+- Trained models are found on the HTX ROG laptop, under my "Trained Models". Not uploaded here due to security and size restrictions.
 - Installation process is the same as the [General Object Detector](#installation-and-use).
 
 </details>
